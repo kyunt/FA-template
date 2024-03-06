@@ -457,7 +457,7 @@ form .textarea-field .item {
         font-weight: 600;
     }
 
-    .primary-navigation[data-visible="false"] li a{
+    .primary-navigation[data-visible="false"] {
         visibility: hidden;
     }
 

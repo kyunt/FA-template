@@ -9,10 +9,12 @@ body {
     padding: 0;
     margin: 0;
     max-width: 100vw;
+    overflow-x: hidden;
 }
 
 html {
     min-height: 100dvh;
+    overflow-x: hidden;
 }
 
 li a {
@@ -456,8 +458,7 @@ form .textarea-field .item {
         font-size: 0.9em;
         font-weight: 600;
     }
-
-    .primary-navigation[data-visible="false"] {
+    .primary-navigation[data-visible="false"] li a{
         visibility: hidden;
     }
 

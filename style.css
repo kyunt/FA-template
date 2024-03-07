@@ -176,10 +176,14 @@ p {
 .reviews,
 .services,
 .people {
+    background-color: #fbfbfb;
     padding: 4em 1.4em;
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    background-color: #fbfbfb;
+    max-width: 75em;
 }
 
 .about h2 {
@@ -732,11 +736,25 @@ form .textarea-field .item {
     
     .review-cont {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
         justify-content: center;
         gap: 2em;
         width: 100%;
         padding: 3em 0;
+    }
+
+    .service-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(8em, 100%/5)), 1fr));;
+        justify-content: center;
+        gap: 2em;
+        width: 100%;
+        padding: 3em 0;
+    }
+
+    .stone-image {
+        min-height: 25em;
+        max-width: 75em;
     }
 
 }
@@ -757,7 +775,7 @@ form .textarea-field .item {
     .header-cont {
         height: 55em;
     }
-    
+
 }
 
 @media (min-width: 1200px) {

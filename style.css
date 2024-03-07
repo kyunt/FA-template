@@ -173,7 +173,9 @@ p {
 
 .about,
 .points,
-.reviews {
+.reviews,
+.services,
+.people {
     padding: 4em 1.4em;
     display: flex;
     flex-direction: column;
@@ -203,7 +205,7 @@ p {
     background-size: cover;
     height: 20em;
     width: 100%;
-    padding: 2em;
+    padding: 0 2em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -266,7 +268,8 @@ p {
 
 /* Reviews */
 
-.reviews {
+.reviews,
+.services {
     background-color: #f3f4fa;
 }
 
@@ -280,7 +283,7 @@ p {
 
 .review {
     width: 100%;
-    height: 22em;
+    min-height: 22em;
     background-color: #fbfbfb;
     border-radius: 0.4em;
     display: flex;
@@ -320,65 +323,208 @@ p {
     margin-top: 0.5em;
 }
 
+/* Why Choose Us */
+
+.why-us {
+    padding: 4em 1.4em;
+    display: flex;
+    flex-direction: column;
+    background: url(./images/sea.webp) no-repeat center;
+}
+
+.why-text {
+    padding: 2em;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: #fbfbfb;
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+.why-text h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.why-text p {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 1em;
+    color: #fbfbfb;
+}
+
+#white-upper {
+    font-weight: 700;
+    opacity: 1;
+    font-size: 1.1em;
+    color: #fbfbfb;
+}
+
+#why-button {
+    background-color: transparent;
+    border: #2E94B9 0.25em solid;
+    margin-top: 2em;
+}
+
+/* Services */
+
+.services {
+    background-color: #0b0c13;
+    color: #fbfbfb;
+}
+
+.service-img {
+    height: 6em;
+    width: 6em;
+    padding: 2em;
+    display: block;
+    margin-top: 1em;
+}
+
+.service-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#point-serv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.services h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.services p {
+    font-size: 1em;
+    margin-top: 1em;
+    color: #fbfbfb;
+}
+
+#scale-image {
+    background: url(./images/Scale.svg) no-repeat center;
+    background-size: contain;
+}
+
+#light-image {
+    background: url(./images/LightBulb.svg) no-repeat center;
+    background-size: contain;
+}
+
+#trophy-image {
+    background: url(./images/Trophy.svg) no-repeat center;
+    background-size: contain;
+}
+
+#chart-image {
+    background: url(./images/ChartPie.svg) no-repeat center;
+    background-size: contain;
+}
+
+#final-contact {
+    background: url(./images/landscape.webp) no-repeat center;
+    background-size: cover;
+    background-position: center;
+}
+
+#final-why {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
 /* Footer */
 
 .first-footer {
-    background-color: #2E94B9;
-    height: 10em;
+    background-color: #12141d;
+    min-height: 18em;
     width: 100%;
     padding: 0;
     margin: 0 auto;
     font-size: 1.2em;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     --gap: 3rem;
 }
 
-.first-footer h2 {
+.footer-logo {
+    background-image: url(./images/oak-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 8em;
+    min-width: 8em;
+    margin-left: auto;
+    margin-right: auto;
+    outline: red 1px solid;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.footer-contact h2 {
     font-size: 1.2em;
     font-weight: 700;
-    color: #f0fbff;
+    color: #9ca9d8;
     margin-top: 1em;
-    text-align: center;
-    text-decoration: solid underline #f0fbff;
     text-underline-offset: 0.2em;
 }
 
-.first-footer ul {
+
+.second-footer {
+    background-color: #0b0c13;
+    min-height: 20em;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    --gap: 3rem;
+}
+.second-footer h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #9ca9d8;
+    margin-top: 1em;
+    text-underline-offset: 0.2em;
+}
+
+.second-footer ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.first-footer ul li {
+.second-footer ul li {
     margin-right: 1em;
 }
 
-.first-footer ul li a {
-    font-weight: 700;
-    text-shadow: #000001;
-}
-
-.second-footer {
-    background: 
-        linear-gradient(
-            270deg,
-            #0d7ea7,
-            #2b89ac
-        ) ;
-    height: 4em;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    font-size: 0.9em;
-    text-align: center;
-    color: #f0fbff;
+.second-footer ul li a {
+    font-weight: 500;
+    color: #fbfbfb;
 }
 
 .second-footer p {
     opacity: 1;
+    font-size: 1em;
+    color: #fbfbfb;
+    font-weight: 500;
 }
 
 /* Contact Form */
@@ -521,7 +667,8 @@ form .textarea-field .item {
         margin-top: 1.5em;
     }
 
-    .point-cont {
+    .point-cont,
+    .services-cont {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1em;

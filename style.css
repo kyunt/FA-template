@@ -124,12 +124,10 @@ p {
 
 .hidden {
     opacity: 0;
-    transform: translateX(-100%);
 }
 
 .show {
     opacity: 1;
-    transform: translateX(0);
 }
 
 .hero {
@@ -766,6 +764,10 @@ form .textarea-field .item {
         margin-left: auto;
     }
 
+    .hero h1 {
+        font-size: 3em;
+    }
+
     .logo {
         margin-left: 5%;
         width: 8em;
@@ -793,5 +795,9 @@ form .textarea-field .item {
         width: 9em;
         height: 9em;
         margin: auto 0;
+    }
+
+    .hero h1 {
+        font-size: 3.2em;
     }
 }

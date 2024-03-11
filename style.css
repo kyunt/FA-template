@@ -503,17 +503,16 @@ p {
     padding: 0 1em 1em 1em;
 }
 
-.footer-contact h2 {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: #9ca9d8;
-    margin-top: 1em;
-    text-underline-offset: 0.2em;
+.contact-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
 }
 
-.footer-contact p {
+.contact-cont p {
     opacity: 1;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #fbfbfb;
     font-weight: 500;
 }
@@ -539,9 +538,9 @@ p {
 
 .second-footer {
     background-color: #0b0c13;
-    min-height: 18em;
+    min-height: 26em;
     width: 100%;
-    padding: 0;
+    padding: 4em 1.4em;
     margin: 0 auto;
     font-size: 1.2em;
     display: flex;
@@ -550,23 +549,30 @@ p {
     justify-content: space-around;
     --gap: 3rem;
 }
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+    max-width: 45em;
+}
+
 .second-footer h2 {
     font-size: 1.2em;
     font-weight: 700;
     color: #9ca9d8;
-    margin-top: 1em;
-    text-underline-offset: 0.2em;
 }
 
 .second-footer ul {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    list-style: none;
+    padding: 0;
 }
 
 .second-footer ul li {
-    margin-right: 1em;
+    margin-left: 0.2em;
 }
 
 .second-footer ul li a {
@@ -584,7 +590,6 @@ p {
     font-size: 1em;
     color: #fbfbfb;
     font-weight: 500;
-    text-align: center;
     border-top: #fbfbfb 0.1em solid;
 }
 
@@ -790,6 +795,27 @@ form .textarea-field .item {
         max-width: 75em;
     }
 
+    .footer-contact {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+    }
+
+    .contact-cont {
+        min-width: 14em;
+    }
+    
+    .quick-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(8em, 100%/5)), 1fr));;
+        justify-content: center;
+        gap: 2em;
+        padding: 3em 0;
+    }
+
+    .second-footer ul {
+        align-items: center;
+    }
 }
 
 @media (min-width: 992px) {
@@ -812,7 +838,14 @@ form .textarea-field .item {
     .header-cont {
         height: 55em;
     }
+    
+    .first-footer {
+        font-size: 1.4em;
+    }
 
+    .second-footer {
+        font-size: 1.4em;
+    }
 }
 
 @media (min-width: 1200px) {

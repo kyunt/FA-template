@@ -356,7 +356,9 @@ p {
     padding: 4em 1.4em;
     display: flex;
     flex-direction: column;
-    background: url(./images/sea.webp) no-repeat center;
+    background: url(./images/sea.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .why-text {
@@ -556,6 +558,7 @@ p {
     padding: 1em;
     width: 100%;
     max-width: 45em;
+    
 }
 
 .second-footer h2 {

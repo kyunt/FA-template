@@ -56,7 +56,8 @@ p {
     --gap: 3rem;
 }
 
-.header-cont h1 {
+.header-cont h1,
+.header-cont-other h1 {
     font-size: 3em;
     font-weight: 700;
     color: #fbfbfb;
@@ -64,13 +65,19 @@ p {
     text-align: center;
 }
 
-.header-cont {
+.header-cont,
+.header-cont-other {
     background-image: url(./images/york-minster-cover.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     height: 45em;
+}
+
+.header-cont-other {
+    background-image: url(./images/office-cover.webp);
+    height: 32em;
 }
 
 .header-bottom {
@@ -192,7 +199,8 @@ p {
 .points,
 .reviews,
 .services,
-.people {
+.people,
+.points-other {
     background-color: #fbfbfb;
     padding: 4em 1.4em;
 }
@@ -246,26 +254,47 @@ p {
     color: #333;
 }
 
-.point {
-    display: block;
+.points-other h3 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 0.4em;
+    opacity: 1;
+    color: #333;
+}
+
+.points-other p {
+    font-size: 1em;
+    color: #6e44c4;
+    opacity: 1;
+}
+
+.point,
+.point-other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     padding: 1em;
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 .point:nth-child(1),
-.review:nth-child(1) {
+.review:nth-child(1),
+.point-other:nth-child(1) {
     transition-delay: 200ms;
 }
 
 .point:nth-child(2),
-.review:nth-child(2) {
+.review:nth-child(2),
+.point-other:nth-child(2) {
     transition-delay: 400ms;
 }
 
 .point:nth-child(3),
-.review:nth-child(3) {
+.review:nth-child(3),
+.point-other:nth-child(3) {
     transition-delay: 600ms;
 }
 
@@ -478,7 +507,7 @@ p {
     background-color: #12141d;
     min-height: 18em;
     width: 100%;
-    padding: 0;
+    padding: 3em 0;
     margin: 0 auto;
     font-size: 1.2em;
     display: flex;
@@ -542,7 +571,7 @@ p {
     background-color: #0b0c13;
     min-height: 26em;
     width: 100%;
-    padding: 4em 1.4em;
+    padding: 3em 1.4em;
     margin: 0 auto;
     font-size: 1.2em;
     display: flex;
@@ -598,6 +627,10 @@ p {
 
 /* Contact Form */
 
+iframe {
+    width: 100%;
+}
+
 .contact-form {
     padding: 2em 2em;
     display: flex;
@@ -607,7 +640,6 @@ p {
 
 .contact-form form {
     width: 100%;
-    border-top: #2E94B9 2px dashed;
     text-align: center;
 }
 
@@ -624,11 +656,19 @@ form .input-box {
 
 .field .item {
     width: 100%;
-    border: #2E94B9 0.1em solid;
+    border: #e0e0e0 0.1em solid;
     padding: 0.5em;
     font-size: 1.2em;
-    border-radius: 0.1em;
+    border-radius: 0.4em;
     margin: 0;
+    background-color: #e0e0e0;
+}
+
+.input-field .item:focus,
+.textarea-field .item:focus {
+    border-bottom: #2E94B9 0.2em solid;
+    margin-bottom: -0.1em;
+    outline: none;
 }
 
 form .textarea-field .item {
@@ -704,17 +744,7 @@ form .textarea-field .item {
     }
 }
 
-@media (max-width: 360px) {
-    .logo {
-        border: red 1px solid;
-    }
-}
-
 @media (min-width: 420px) {
-    .second-footer {
-        height: 2em;
-    }
-
     .hero {
         padding: 5em 3em;
     }
@@ -737,7 +767,8 @@ form .textarea-field .item {
     }
 
     .point-cont,
-    .services-cont {
+    .services-cont,
+    .point-cont-other {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1em;
@@ -818,6 +849,14 @@ form .textarea-field .item {
 
     .second-footer ul {
         align-items: center;
+    }
+
+    .first-footer {
+        padding: 0 1.4em;
+    }
+
+    .second-footer {
+        padding: 0 1.4em;
     }
 }
 
